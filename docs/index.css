@@ -53,3 +53,10 @@ button:hover {
   background-color: lightgreen;
   cursor: pointer;
 }
+
+/*Keeps footer at bottom*/
+footer {
+position: fixed;
+    bottom: 0;
+    width: 100%;
+}
