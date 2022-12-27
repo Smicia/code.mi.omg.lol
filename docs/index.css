@@ -1,8 +1,94 @@
-/* Style the footer */
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  /* Style the footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 10%;
+    background-color: #ffffff8c;
+    border-radius: 10%;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  /* Style the background and text alignment */
+  html {
+    background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #0000ff, #ff00ff, #ff0000);
+    background-size: 1000% 1000%;
+    animation: gradient 15s ease infinite;
+    text-align: center;
+  }
+
+  /* Style the keyframe animation for the gradient */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } 
+
+  /* Style the h1 element */
+  h1 {
+    font-family: 'Helvetica', cursive;
+    color: white;
+  }
+
+  /* Style the p element */
+  p {
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+
+  /* Style the button element */
+  button {
+    background-color: green;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  /* Style the button when hovered over */
+  button:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+    color: black;
+  }
+
+  /* Style the header */
+  header {
+    background-color: #666666;
+  }
+
+  /* Style the p element with id "thebit" */
+  #thebit {
+    background-color: #02afb86e;
+    display: inline-flex;
+    text-align: center;
+    font-size: large;
+  }
+
+  /* Style the footer p elements with class "fop" */
+  .fop {
+    color: #666666;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+/* Mobile-specific styles go here */
+@media (max-width: 1023px) {
+  /* Style the footer */
 footer {
   position: fixed;
   bottom: 0;
-  width: 10%;
+  width: 100%;
   background-color: #ffffff8c;
   border-radius: 10%;
   margin: 10px;
@@ -34,12 +120,14 @@ html {
 h1 {
   font-family: 'Helvetica', cursive;
   color: white;
+  font-size: 24px; /* Decrease font size for mobile */
 }
 
 /* Style the p element */
 p {
   font-family: 'Arial', sans-serif;
   color: white;
+  font-size: 16px; /* Decrease font size for mobile */
 }
 
 /* Style the button element */
@@ -69,6 +157,7 @@ header {
   background-color: #02afb86e;
   display: inline-flex;
   text-align: center;
+  font-size: large;
 }
 
 /* Style the footer p elements with class "fop" */
@@ -76,4 +165,6 @@ header {
   color: #666666;
   text-align: center;
   font-size: 12px;
+}
+
 }
