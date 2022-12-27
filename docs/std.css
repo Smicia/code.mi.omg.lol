@@ -52,6 +52,7 @@ header {
   font-size: 24px;
   background-color: #333;
   color: #fff;
+  padding: 10px;
 }
 
 /* Navigation styles */
@@ -62,12 +63,12 @@ nav {
   background-color: #333;
   color: #fff;
   list-style: none;
+  padding: 10px;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 10px;
-  margin: 5px;
+  padding: 10px
 }
