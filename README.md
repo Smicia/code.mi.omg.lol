@@ -1,5 +1,4 @@
-# mi.omg.lol
-Stuff for mi.omg.lol
+# code.mi.omg.lol
 
-
-Note some is probably AI-generated, so blame Elon if its crap! 
+##Intro
+docs is the most imp. folder. It is where code.mi.omg.lol is based. Rest TBD.
