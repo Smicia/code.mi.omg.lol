@@ -7,7 +7,7 @@ footer {
 
 /* Style the background and text alignment */
 html {
-  background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+  background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #0000ff, #ff00ff, #ff0000);
   background-size: 1000% 1000%;
   animation: gradient 15s ease infinite;
   text-align: center;
@@ -52,14 +52,28 @@ button {
 button:hover {
   background-color: lightgreen;
   cursor: pointer;
+  color:black
 }
 
 /*Keeps footer at bottom*/
 footer {
-position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-image: linear-gradient(to right, 
-    red, orange, yellow, green, blue, indigo, violet);
-    border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  width: 10%;
+  background-color: #ffffff8c;
+  border-radius: 10%;
+  margin: 10px;
+  padding: 5px;
+}
+
+/*Keeps footer p correct */
+.fop {
+  color: #666666;
+  text-align: center;
+  font-size: 12px;
+}
+
+/*Style header*/
+header {
+  background-color: #666666;
 }
