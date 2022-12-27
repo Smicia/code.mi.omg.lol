@@ -1,8 +1,12 @@
-  /* Style the footer */
+/* Style the footer */
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 10%;
+  background-color: #ffffff8c;
+  border-radius: 10%;
+  margin: 10px;
+  padding: 5px;
 }
 
 /* Style the background and text alignment */
@@ -28,7 +32,7 @@ html {
 
 /* Style the h1 element */
 h1 {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Helvetica', cursive;
   color: white;
 }
 
@@ -52,28 +56,24 @@ button {
 button:hover {
   background-color: lightgreen;
   cursor: pointer;
-  color:black
+  color: black;
 }
 
-/*Keeps footer at bottom*/
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 10%;
-  background-color: #ffffff8c;
-  border-radius: 10%;
-  margin: 10px;
-  padding: 5px;
+/* Style the header */
+header {
+  background-color: #666666;
 }
 
-/*Keeps footer p correct */
+/* Style the p element with id "thebit" */
+#thebit {
+  background-color: #02afb86e;
+  display: inline-flex;
+  text-align: center;
+}
+
+/* Style the footer p elements with class "fop" */
 .fop {
   color: #666666;
   text-align: center;
   font-size: 12px;
-}
-
-/*Style header*/
-header {
-  background-color: #666666;
 }
