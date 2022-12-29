@@ -1,0 +1,37 @@
+<!-- This is a test site that shows the Alliance's ALISS in action. Please refer to aliss.org for more information-->
+<!-- This is page is exempt from the license at code.mi.omg.lol/more. Instead it is under CC BY 4.0 -->
+
+<html>
+    <head>
+        <script src="https://code.mi.omg.lol/aliss.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://code.mi.omg.lol/index.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Search for local Services - <a href="https://aliss.org">by The Alliance</a></h1>
+        </header>
+        <main>
+            <p id="thebit">Note: Mostly a test for me. If you are <b>actually looking for services in Scotland</b>, please look at <a href="https://aliss.org">the ALISS website</a></p>
+            <br><br><br>
+            <div id="thebit">
+                <div id="aliss-target"></div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <!-- Paragraph with message thanking GitHub and omg.lol -->
+                <p class="fop" style="font-size: medium">Made possible by <a href="https://github.com">GitHub</a>, <a
+                    href="https://home.omg.lol/referred-by/mi">omg.lol</a> and <a href="https://alliance-scotland.org.uk">by The Alliance</a></p>
+                <!-- Paragraph with link to more information -->
+                <p class="fop" style="font-size: small">More info <a href="http://code.mi.omg.lol/more">here</a></p>
+            </div>
+            <div>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </div>
+            <script>
+                window.aliss = new ALISS('#aliss-target',{});
+                </script>
+        </footer>
+    </body>
+</html>

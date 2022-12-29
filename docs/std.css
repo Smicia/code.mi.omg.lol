@@ -44,7 +44,7 @@ footer {
   padding: 20px;
 }
 
-/* Header styles */
+/* Navigation styles */
 header {
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ header {
   padding: 10px;
 }
 
-/* Navigation styles */
+
 nav {
   display: flex;
   align-items: center;
@@ -70,5 +70,18 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 10px
+  padding: 10px 20px; /* add padding to the top and bottom and left and right of the element */
+  display: inline-block; /* make the button wider */
+  background-color: #333; /* add a background color to the button */
+  border: none; /* remove the default border around the button */
+  border-radius: 5px; /* add rounded corners to the button */
+  cursor: pointer; /* change the cursor to a pointer when hovering over the button */
+}
+
+nav a:hover {
+  background-color: #666; /* change the background color to a darker shade of grey when hovered */
+}
+
+nav a:active {
+  background-color: #999; /* change the background color to an even darker shade of grey when clicked */
 }
