@@ -22,10 +22,12 @@ p {
 a {
   color: #0066cc;
   text-decoration: none;
+  font-weight: 800;
 }
 
 a:hover {
   text-decoration: underline;
+  font-weight: 700;
 }
 
 /* Container for main content */
