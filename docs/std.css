@@ -66,6 +66,7 @@ nav {
   color: #fff;
   list-style: none;
   padding: 10px;
+  font-weight: normal;
 }
 
 nav a {
@@ -78,12 +79,15 @@ nav a {
   border: none; /* remove the default border around the button */
   border-radius: 5px; /* add rounded corners to the button */
   cursor: pointer; /* change the cursor to a pointer when hovering over the button */
+  font-weight: normal;
 }
 
 nav a:hover {
   background-color: #666; /* change the background color to a darker shade of grey when hovered */
+  font-weight: normal;
 }
 
 nav a:active {
   background-color: #999; /* change the background color to an even darker shade of grey when clicked */
+  font-weight: normal;
 }
