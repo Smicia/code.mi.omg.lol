@@ -41,8 +41,8 @@
     </script>
 
     <style>
-        .french{
-            display:none;
+        .french {
+            display: none;
         }
 
         body header p {
@@ -50,6 +50,32 @@
             text-align: right;
             padding: 0 10px;
         }
+        /* Flag */
+        #french-flag {
+        width: 50px; /* Adjust the width as desired */
+        height: 100%; /* Make the stripe the full height of the page */
+        }
+
+        /* Add three separate div elements for each color */
+        #french-flag .blue {
+        background-color: #002395;
+        height: 33.333%; /* Divide the height of the stripe evenly among the three bars */
+        }
+
+        #french-flag .white {
+        background-color: #ffffff;
+        height: 33.333%;
+        }
+
+        #french-flag .red {
+        background-color: #ed2939;
+        height: 33.333%;
+        }
+
+        main {
+        padding-left: 50px;
+        }
+
 
     </style>
 </head>
@@ -58,46 +84,82 @@
 
     <header>
         <div class="english">
-            French Word Lookup
+            French Word Lookup | 
         </div>
         <div class="french">
-            La Recherche De Mots Français
+            La Recherche De Mots Français | 
         </div>
 
-        <p onclick="chooseEnglish()">English</p> <p onclick="choisissezFrancais()">Français</p>
+    
+    <br><br>
+
+        <p onclick="chooseEnglish()">English</p>
+        <p onclick="choisissezFrancais()">Français</p>
     </header>
 
-    <div class="english">
-        <h1>Welcome to the French Word Lookup!</h1>
-        <p>Enter a French word in the box below and press the "Go" button to open dictionary definitions and
-            translations in
-            new tabs:</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="english">
+            <a href="https://mi.omg.lol">Home</a>
+            <a href="https://mi.omg.lol/thoughts">Thoughts</a>
+            <a href="https://code.mi.omg.lol">Code</a>
+        </div>
 
-        <!-- The form that does the lookup - see  int. JS for more -->
-        <form id="linkForm">
-            <input type="text" id="linkText" placeholder="Enter French word here">
-            <button type="submit">Go</button>
-        </form>
-    </div>
+        <div class="french">
+            <a href="https://mi.omg.lol">Accueil</a>
+            <a href="https://mi.omg.lol/thoughts">Pensées</a>
+            <a href="https://code.mi.omg.lol">Code</a>
+        </div>
+        
+    </nav>
 
-    <div class="french">
-        <h1>Bienvenue sur la recherche de mots français !</h1>
-        <p>Entrez un mot français dans la boîte ci-dessous et appuyez sur le bouton "Go" pour ouvrir les définitions de
-            dictionnaire et les traductions dans de nouvelles onglets :</p>
+    <main>
+        <div id="french-flag">
+            <div class="blue"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+          </div>
+          
+          <div style="max-width: 800px; margin: 0 auto; padding: 20px;" class="english">
 
-        <!-- Le formulaire qui effectue la recherche - voir int. JS pour plus de détails -->
-        <form id="linkForm">
-            <input type="text" id="linkText" placeholder="Entrez le mot français ici">
-            <button type="submit">Aller</button>
-        </form>
-    </div>
-    
+            <h1>Welcome to the French Word Lookup!</h1>
+            <p>Enter a French word in the box below and press the "Go" button to open dictionary definitions and
+                translations in
+                new tabs:</p>
+
+            <!-- The form that does the lookup - see  int. JS for more -->
+            <form id="linkForm">
+                <input type="text" id="linkText" placeholder="Enter French word here">
+                <button type="submit">Go</button>
+            </form>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; padding: 20px;" class="french">
+            <h1>Bienvenue sur la recherche de mots français !</h1>
+            <p>Entrez un mot français dans la boîte ci-dessous et appuyez sur le bouton "Aller" pour ouvrir les définitions de
+                dictionnaire et les traductions dans de nouvelles onglets :</p>
+
+            <!-- Le formulaire qui effectue la recherche - voir int. JS pour plus de détails -->
+            <form id="linkForm">
+                <input type="text" id="linkText" placeholder="Entrez le mot français ici">
+                <button type="submit">Aller</button>
+            </form>
+        </div>
+
+    </main>
     <footer>
-      <div>
-        <p style="font-size: medium">Made possible by <a href="https://github.com">GitHub</a> and <a
-            href="https://home.omg.lol/referred-by/mi">omg.lol</a></p>
-        <p style="font-size: small">Enquires can be made at mi at omg doot lol, if needed, <b>mais seulement en anglais.</b></p>
-      </div>
+        <div class="english">
+            <p style="font-size: medium">Made possible by <a href="https://github.com">GitHub</a> and <a
+                href="https://home.omg.lol/referred-by/mi">omg.lol</a></p>
+            <p style="font-size: small">Enquires can be made at mi at omg doot lol, if needed.
+          </div>
+          
+          <div class="french">
+            <p style="font-size: medium">Rendu possible grâce à <a href="https://github.com">GitHub</a> et <a
+                href="https://home.omg.lol/referred-by/mi">omg.lol</a></p>
+            <p style="font-size: small">Les demandes de renseignements peuvent être faites à mi at omg doot lol, si
+                nécessaire, <b>mais seulement en anglais.</b></p>
+          </div>          
     </footer>
 </body>
 
