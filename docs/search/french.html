@@ -18,27 +18,27 @@
     <link rel="stylesheet" href="https://code.mi.omg.lol/std.css">
 
     <!-- JS that provides for the form that makes the lookup -->
-    <script>
-        // Get a reference to the form and the text input
-        const form = document.getElementById('linkForm');
-        const text = document.getElementById('linkText');
-
-        // Add an event listener for the form's submit event
-        form.addEventListener('submit', (event) => {
-            // Prevent the form from being submitted to the server
-            event.preventDefault();
-
-            // Append the value of the text input to the links
-            const link1 = 'https://www.example.com/dictionary1?word=' + text.value;
-            const link2 = 'https://www.example.com/dictionary2?word=' + text.value;
-            const link3 = 'https://www.example.com/translator?word=' + text.value;
-
-            // Open the links in new tabs
-            window.open(link1, '_blank');
-            window.open(link2, '_blank');
-            window.open(link3, '_blank');
-        });
-    </script>
+    <style>
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+      
+        #search-term {
+          font-size: 20px;
+          height: 50px;
+          width: 300px;
+        }
+      
+        .checkbox-container {
+          display: flex;
+          align-items: center;
+        }
+      
+        .checkbox-label {
+          margin-left: 5px;
+        }
+      </style>
 
     <style>
         .french {
@@ -57,25 +57,26 @@
         }
 
         /* Add three separate div elements for each color */
-        #french-flag .blue {
-        background-color: #002395;
-        height: 33.333%; /* Divide the height of the stripe evenly among the three bars */
+        /*Relating to the Form*/
+        form {
+          display: flex;
+          flex-direction: column;
         }
-
-        #french-flag .white {
-        background-color: #ffffff;
-        height: 33.333%;
+      
+        #search-term {
+          font-size: 20px;
+          height: 50px;
+          width: 300px;
         }
-
-        #french-flag .red {
-        background-color: #ed2939;
-        height: 33.333%;
+      
+        .checkbox-container {
+          display: flex;
+          align-items: center;
         }
-
-        main {
-        padding-left: 50px;
+      
+        .checkbox-label {
+          margin-left: 5px;
         }
-
 
     </style>
 </head>
@@ -114,36 +115,51 @@
     </nav>
 
     <main>
-        <div id="french-flag">
-            <div class="blue"></div>
-            <div class="white"></div>
-            <div class="red"></div>
-          </div>
           
           <div style="max-width: 800px; margin: 0 auto; padding: 20px;" class="english">
 
             <h1>Welcome to the French Word Lookup!</h1>
+            <div class="container" style="background-color:gold;text-align:center">
+                <h2>Note: You will need to accept pop-ups from this page.</h2>
+                <p>This is so we can open all the pages in new tabs.</p>
+            </div>
             <p>Enter a French word in the box below and press the "Go" button to open dictionary definitions and
                 translations in
                 new tabs:</p>
 
             <!-- The form that does the lookup - see  int. JS for more -->
-            <form id="linkForm">
-                <input type="text" id="linkText" placeholder="Enter French word here">
-                <button type="submit">Go</button>
-            </form>
+            <form onsubmit="return search()">
+                <label for="search-term">Search:</label>
+                <input type="text" id="search-term" placeholder="Enter word here">
+                <input type="checkbox" name="search-engine" value="forvo" checked>Forvo<br>
+                <input type="checkbox" name="search-engine" value="google-translate" checked>Google Translate<br>
+                <input type="checkbox" name="search-engine" value="reverso" checked>Reverso<br>
+                <input type="checkbox" name="search-engine" value="linguee" checked>Linguee<br>
+                <input type="checkbox" name="search-engine" value="wordreference" checked>WordReference<br>
+                <input type="submit" value="Go">
+              </form>
         </div>
 
         <div style="max-width: 800px; margin: 0 auto; padding: 20px;" class="french">
             <h1>Bienvenue sur la recherche de mots français !</h1>
+            <div class="container" style="background-color:gold;text-align:center">
+                <h2>Attention : vous devrez accepter les pop-ups de cette page.</h2>
+                <p>Cela nous permet d'ouvrir les pages dans de nouveaux onglets.</p>
+            </div>
             <p>Entrez un mot français dans la boîte ci-dessous et appuyez sur le bouton "Aller" pour ouvrir les définitions de
                 dictionnaire et les traductions dans de nouvelles onglets :</p>
 
             <!-- Le formulaire qui effectue la recherche - voir int. JS pour plus de détails -->
-            <form id="linkForm">
-                <input type="text" id="linkText" placeholder="Entrez le mot français ici">
-                <button type="submit">Aller</button>
-            </form>
+            <form onsubmit="return search()">
+                <label for="search-term">Search:</label>
+                <input type="text" id="search-term" placeholder="Enter word here">
+                <input type="checkbox" name="search-engine" value="forvo" checked>Forvo<br>
+                <input type="checkbox" name="search-engine" value="google-translate" checked>Google Traduction<br>
+                <input type="checkbox" name="search-engine" value="reverso" checked>Reverso<br>
+                <input type="checkbox" name="search-engine" value="linguee" checked>Linguee<br>
+                <input type="checkbox" name="search-engine" value="wordreference" checked>WordReference<br>
+                <input type="submit" value="Aller">
+              </form>
         </div>
 
     </main>

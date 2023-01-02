@@ -15,27 +15,27 @@
     <link rel="stylesheet" href="https://code.mi.omg.lol/std.css">
 
     <!-- JS that provides for the form that makes the lookup -->
-    <script>
-        // Get a reference to the form and the text input
-        const form = document.getElementById('linkForm');
-        const text = document.getElementById('linkText');
-
-        // Add an event listener for the form's submit event
-        form.addEventListener('submit', (event) => {
-            // Prevent the form from being submitted to the server
-            event.preventDefault();
-
-            // Append the value of the text input to the links
-            const link1 = 'https://www.example.com/dictionary1?word=' + text.value;
-            const link2 = 'https://www.example.com/dictionary2?word=' + text.value;
-            const link3 = 'https://www.example.com/translator?word=' + text.value;
-
-            // Open the links in new tabs
-            window.open(link1, '_blank');
-            window.open(link2, '_blank');
-            window.open(link3, '_blank');
-        });
-    </script>
+    <style>
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+      
+        #search-term {
+          font-size: 20px;
+          height: 50px;
+          width: 300px;
+        }
+      
+        .checkbox-container {
+          display: flex;
+          align-items: center;
+        }
+      
+        .checkbox-label {
+          margin-left: 5px;
+        }
+      </style>
 
 </head>
 
@@ -60,10 +60,47 @@
             translations in
             new tabs:</p>
         <!-- The form that does the lookup - see  int. JS for more -->
-        <input type="text" name="url_param" id="url_param" />
-        <input type="button" onclick="prepare_link();" value="Do it!" />
-        
-        </form>
+        <form onsubmit="return search()">
+            <label for="search-term">Search:</label>
+            <input type="text" id="search-term" placeholder="Enter word here">
+            <input type="checkbox" name="search-engine" value="forvo" checked>Forvo<br>
+            <input type="checkbox" name="search-engine" value="google-translate" checked>Google Translate<br>
+            <input type="checkbox" name="search-engine" value="reverso" checked>Reverso<br>
+            <input type="checkbox" name="search-engine" value="linguee" checked>Linguee<br>
+            <input type="checkbox" name="search-engine" value="wordreference" checked>WordReference<br>
+            <input type="submit" value="Submit">
+          </form>
+          
+          <script>
+          function search() {
+            // Get the search term and selected search engines
+            var searchTerm = document.getElementById('search-term').value;
+            var searchEngines = document.querySelectorAll('input[name="search-engine"]:checked');
+          
+            // Open the search results for each selected search engine in a new tab
+            for (var i = 0; i < searchEngines.length; i++) {
+              var searchEngine = searchEngines[i].value;
+              var searchUrl;
+              if (searchEngine == 'forvo') {
+                searchUrl = 'https://www.forvo.com/search/' + encodeURIComponent(searchTerm);
+              } else if (searchEngine == 'google-translate') {
+                searchUrl = 'https://translate.google.com/?sl=fr&tl=en&text=' + encodeURIComponent(searchTerm);
+              } else if (searchEngine == 'reverso') {
+                searchUrl = 'https://context.reverso.net/translation/french-english/' + encodeURIComponent(searchTerm);
+              } else if (searchEngine == 'linguee') {
+                searchUrl = 'https://www.linguee.fr/search?source=auto&query=' + encodeURIComponent(searchTerm);
+              } else if (searchEngine == 'wordreference') {
+                searchUrl = 'https://www.wordreference.com/enfr/' + encodeURIComponent(searchTerm);
+              }
+              window.open(searchUrl, '_blank');
+            }
+          
+            // Prevent the form from submitting and refreshing the page
+            return false;
+          }
+          </script>
+          
+          
     </div>
 
     <footer>
